@@ -53,3 +53,21 @@ void UpGradesByOne(char grades[], int size) {
 	// is the highest grade possible
 }
 ```
+
+## Development Journal
+
+Notiable errors I enouter and fixed.
+
+```txt
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	LNK2019	unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)	StudentGradeAssignment	C:\Users\k00280835\source\repos\learn-cplusplus\StudentGradeAssignment\MSVCRTD.lib(exe_main.obj)	1	
+```
+
+Problem was caused by the main function being `Main()` . Solution was lower case main.
+
+```cpp
+int main()
+{
+/* ... */
+}
+```
